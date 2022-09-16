@@ -168,6 +168,7 @@ class Test00UserRegistration:
     def test_00_obtain_jwt_token_invalid_data(self, client):
 
         request_type = 'POST'
+        print(self.url_token)
         response = client.post(self.url_token)
         assert response.status_code != 404, (
             f'Страница `{self.url_token}` не найдена, проверьте этот адрес в *urls.py*'
